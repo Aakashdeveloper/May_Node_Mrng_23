@@ -1,7 +1,6 @@
 https://code.visualstudio.com/ > Install
 https://nodejs.org/en > Install
 https://git-scm.com/downloads > Install
-
 https://github.com/ > Create Account
 https://github.com/Aakashdeveloper > Follow
 
@@ -43,7 +42,14 @@ React/Angular
 Html/css/jquery
 
 
+NodeJS
+Single threaded , async , non blocking I/O
 
+Event loop structure
+Callback
+
+open source
+(anybody can contribute)
 
 NODEJS @ 9:00 AM (IST) by Mr. Aakash
 Day-1 https://youtu.be/npCI0DihfVw
