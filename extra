@@ -51,5 +51,46 @@ Callback
 open source
 (anybody can contribute)
 
+
+NPM> node package manager
+(It help to install the packages as well as excute the commands)
+3,167,219
+
+JSON> JavaScript object notation
+> Way to represnt the data
+> Key value pair
+
+[
+    {
+        "name":"John",
+        "city":"Delhi"
+    },
+    {
+        "name":"Nikita",
+        "city":"Paris",
+        "subject":"Node"
+    }
+]
+
+//////
+package.json
+> entry point to the ap
+> meta data (version,description,details)
+> All the packages we are using
+> Script(start,test)
+
+/// step to generate package.json
+* NodeJs must be installed in your laptop
+> open the terminal/cmd and go inside the folder
+> npm init
+> Answer all questions
+> Type Yes
+
+/// step to install package
+* NodeJs must be installed in your laptop
+> open the terminal/cmd and go inside the folder
+> npm i package / npm install package
+
+
 NODEJS @ 9:00 AM (IST) by Mr. Aakash
 Day-1 https://youtu.be/npCI0DihfVw
