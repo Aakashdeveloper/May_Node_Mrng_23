@@ -6,8 +6,8 @@ https://github.com/Aakashdeveloper > Follow
 
 
 NPM
-////////////
 Basic NodeJS(in built)(Os,file,http)
+////////////
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
 Third Party Api (Weather Api)
 Redis  > 6379
@@ -92,6 +92,33 @@ package.json
 > open the terminal/cmd and go inside the folder
 > npm i package / npm install package
 
+> Local Dependency
+* Local to the folder
+* used for the one application only
+* Added to package.json
+* npm i packagename
+
+> Dev Dependency
+* Only require at the time development
+* Added to package.json
+* npm i --save-dev packagename
+
+> global Dependecy
+* Installed in your laptop
+* Can be used for any application
+* Need admin access to install
+* Not added in the package.json
+* Only used for running or generating the application
+
+/// Step to install global Dependecy
+# window
+* open the cmd as admin
+* npm i -g packagename
+
+#mac/linux
+* open terminal
+* sudo npm i -g packagename
+
 
 NODEJS @ 9:00 AM (IST) by Mr. Aakash
 Day-1 https://youtu.be/npCI0DihfVw
@@ -114,3 +141,7 @@ Branch Code: 001627 Branch: Ameerpet , Telangana
 Please ping me at 7997998958 admission related queries 
 
 2. https://rzp.io/l/Naresh-IT
+
+
+
+nodemon

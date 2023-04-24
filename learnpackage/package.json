@@ -14,5 +14,8 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0"
   }
 }

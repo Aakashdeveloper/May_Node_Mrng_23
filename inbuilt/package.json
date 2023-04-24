@@ -1,0 +1,15 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "this is about my app",
+  "main": "fs.js",
+  "scripts": {
+   "start":"node staticapi.js",
+   "developer":"node http.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "developer funnel",
+  "license": "ISC"
+}
