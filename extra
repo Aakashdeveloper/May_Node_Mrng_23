@@ -114,10 +114,60 @@ package.json
 # window
 * open the cmd as admin
 * npm i -g packagename
+> npm i -g nodemon
 
 #mac/linux
 * open terminal
 * sudo npm i -g packagename
+> sudo npm i -g nodemon
+
+Ecma Script > Standard of javascript
+es5
+
+function add(a,b){
+    return a+b
+}
+
+es6
+const add = (a,b) => { return a+b}
+/////////////////////////////////////
+
+var a = 10
+var a; // declare
+a = 10 // assignment
+
+var > we can redclare and reassign
+let > we cannot redclare but can reassign
+const > we cannot redclare nor reassign
+
+> var a = 10
+undefined
+> a
+10
+> var a = 20
+undefined
+> a
+20
+> a = 30
+30
+> a
+30
+> let b = 10
+undefined
+> b
+10
+> let b = 11
+Uncaught SyntaxError: Identifier 'b' has already been declared
+> b = 11
+11
+> const c = 10
+undefined
+> c
+10
+> const c = 11
+Uncaught SyntaxError: Identifier 'c' has already been declared
+> c = 11
+Uncaught TypeError: Assignment to constant variable.
 
 
 NODEJS @ 9:00 AM (IST) by Mr. Aakash

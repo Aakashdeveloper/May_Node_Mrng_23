@@ -5,7 +5,7 @@
   "main": "fs.js",
   "scripts": {
    "start":"node staticapi.js",
-   "developer":"node http.js"
+   "dev":"nodemon http.js"
   },
   "keywords": [
     "node"
