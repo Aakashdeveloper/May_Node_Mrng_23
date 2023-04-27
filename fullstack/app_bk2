@@ -1,0 +1,42 @@
+const express = require('express');
+const app = express();
+const port = 8811;
+let categoryRouter = express.Router();
+let productRouter = express.Router();
+
+//routes
+app.get('/',function(req,res){
+    res.send('Hii From Express Default route')
+})
+
+//default route of category
+categoryRouter.route('/')
+    .get((req,res) => {
+        res.send('This is catgeory Route')
+    })
+
+categoryRouter.route('/details')
+    .get((req,res) => {
+        res.send('This is catgeory details Route')
+    })
+
+// product route
+productRouter.route('/')
+    .get((req,res) => {
+        res.send('This is products Route')
+    })
+
+productRouter.route('/details')
+    .get((req,res) => {
+        res.send('This is products details Route')
+    })
+
+
+app.use('/category',categoryRouter)
+app.use('/products',productRouter)
+
+//create server
+app.listen(port,function(err){
+    if(err) throw err;
+    console.log('server listening on port 8811')
+})
