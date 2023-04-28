@@ -1,7 +1,5 @@
-const express = require('express');
-const productRouter = express.Router();
-
-let products = [
+db.products.insert(
+[
     {
         "id": 1,
         "product_name": "Girls top",
@@ -514,17 +512,4 @@ let products = [
         "company": "Bajaj"
     }
 ]
-
-// product route
-productRouter.route('/')
-    .get((req,res) => {
-        //res.send(products)
-        res.render('product',{title:'Products Page',products:products})
-    })
-
-productRouter.route('/details')
-    .get((req,res) => {
-        res.send('This is products details Route')
-    })
-
-module.exports = productRouter;
+)

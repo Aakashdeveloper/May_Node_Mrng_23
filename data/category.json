@@ -1,7 +1,5 @@
-const express = require('express');
-const categoryRouter = express.Router();
-
-let data = [
+db.catgeory.insert(
+[
     {
         "id":1,
         "category": "Fashion",
@@ -22,18 +20,4 @@ let data = [
         "category": "Footwear",
         "thumb":"https://i.ibb.co/r3SZq8S/footware.jpg"
     }
-]
-
-//default route of category
-categoryRouter.route('/')
-    .get((req,res) => {
-        //res.send(data)
-        res.render('category',{title:'Category Page',data})
-    })
-
-categoryRouter.route('/details')
-    .get((req,res) => {
-        res.send('This is catgeory details Route')
-    })
-
-module.exports = categoryRouter;
+])
