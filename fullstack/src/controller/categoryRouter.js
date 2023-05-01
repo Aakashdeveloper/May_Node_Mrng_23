@@ -24,16 +24,21 @@ let data = [
     }
 ]
 
-//default route of category
-categoryRouter.route('/')
-    .get((req,res) => {
-        //res.send(data)
-        res.render('category',{title:'Category Page',data})
-    })
+function router(menu){
+    //default route of category
+    categoryRouter.route('/')
+        .get((req,res) => {
+            //res.send(data)
+            res.render('category',{title:'Category Page',data,menu})
+        })
 
-categoryRouter.route('/details')
-    .get((req,res) => {
-        res.send('This is catgeory details Route')
-    })
+    categoryRouter.route('/details')
+        .get((req,res) => {
+            res.send('This is catgeory details Route')
+        })
 
-module.exports = categoryRouter;
+    return categoryRouter
+
+}
+
+module.exports = router;

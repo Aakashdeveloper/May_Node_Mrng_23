@@ -1,0 +1,80 @@
+> unstructred database
+> nosql > it is not a sql
+
+
+AccNo | Date | Atm name | Balance | Withdraw
+
+SQl
+rollNo | Hindi | English |  Computer
+  1    |  85   |         |
+  2    |       |   78    |
+  3    |  90   |         |   90
+
+
+MongoDb
+[
+    {
+        rollNo:1,
+        Hindi:85
+    },
+    {
+        rollNo:2,
+        English:78
+    },
+    {
+        rollNo:3,
+        Hindi:90,
+        Computer:90
+    }
+]
+
+SQL       Mongo
+database  database
+Table     Collection
+Row       document
+Select    find
+insert    insert
+Update    update
+Delete    remove
+
+////setup of mongodb
+* Download and install
+> https://www.mongodb.com/try/download/community
+
+# window
+* Create folder
+> in c drive create folder by name of data
+C:\data
+> inside data create folder by name of db
+C:\data\db
+
+
+# mac/linux
+open terminal
+> mkdir data/db
+
+
+# Window
+* Step to start server
+> open cmd and go inside bin folder
+> C:\programmfile\mongodb\server\5.0\bin
+> mongod
+(default port 27017)(should to stop if using in app)
+
+* Step to start cli
+> open cmd and go inside bin folder
+> C:\programmfile\mongodb\server\5.0\bin
+> mongo
+(only use for testing query)
+
+
+
+# mac
+* Step to start server
+> open terminal
+> mongodb --dbpath data/db
+
+* Step to start cli
+> open cmd and go inside bin folder
+> open terminal
+> mongo
