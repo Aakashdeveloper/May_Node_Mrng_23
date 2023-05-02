@@ -78,3 +78,44 @@ open terminal
 > open cmd and go inside bin folder
 > open terminal
 > mongo
+
+
+///
+> To see all the dbs
+* Show dbs
+
+> To Go inside db
+* use dbname
+
+> To See all collections
+* show collections
+
+> To see all data in collection
+db.colname.find({})
+
+> Find with condition
+db.users.find({name:"Bhumika"})
+
+> Step to create db
+* use dbaname
+
+> Insert data in db
+* db.users.insert({name:"Amit"})
+
+_id > ObjectId and its a primary key
+> Always unique
+
+
+* db.users.insert({name:"Amit"})
+* db.users.insert({name:"Priya",city:"Delhi"})
+12bytes
+series
+timestamp
+randomnumber
+
+db.users.insert({_id:1,name:"Nikita",city:"Paris"})
+db.users.insert({_id:2,name:"Rohit"})
+
+db.users.insert({_id:1,name:"Arita",city:"Paris"})
+
+db.users.find({city:'Paris'})
