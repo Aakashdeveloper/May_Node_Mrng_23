@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 8811;
+let {dbConnect} = require('./src/controller/dbContoller');
 
 
 
@@ -32,5 +33,6 @@ app.use('/products',productRouter)
 //create server
 app.listen(port,function(err){
     if(err) throw err;
+    dbConnect()
     console.log('server listening on port 8811')
 })

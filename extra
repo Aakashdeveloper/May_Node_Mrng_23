@@ -4,6 +4,13 @@ https://git-scm.com/downloads > Install
 https://github.com/ > Create Account
 https://github.com/Aakashdeveloper > Follow
 
+NODEJS @ 9:00 AM (IST) by Mr. Aakash
+Day-1 https://youtu.be/npCI0DihfVw
+Day-2 https://youtu.be/SEWeGukoJZI
+Day-3 https://youtu.be/5nGDoyCmdwM
+Day-4 https://youtu.be/U_G_JuTIQy8
+Day-5 https://youtu.be/xcafLEkHptU
+Please ping me at 7997998958 admission related queries 
 
 NPM
 Basic NodeJS(in built)(Os,file,http)
@@ -11,6 +18,7 @@ Basic NodeJS(in built)(Os,file,http)
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
 Third Party Api (Weather Api)
 Redis  > 6379
+
 ImageUpload(formidable)
 ImageUpload
 RedisWithMongo
@@ -170,28 +178,12 @@ Uncaught SyntaxError: Identifier 'c' has already been declared
 Uncaught TypeError: Assignment to constant variable.
 
 
-NODEJS @ 9:00 AM (IST) by Mr. Aakash
-Day-1 https://youtu.be/npCI0DihfVw
-Day-2 https://youtu.be/SEWeGukoJZI
-Day-3 https://youtu.be/5nGDoyCmdwM
-Day-4 https://youtu.be/U_G_JuTIQy8
-Day-5 https://youtu.be/xcafLEkHptU
-
-Time: 9.00 am to 10.00 am (IST)
-Duration: 50 Days (1 hr per Day)
-Fee: Rs. 5,000/- (Including GST) without Videos
-Fee: Rs. 8,000/- (Including GST) with Videos
-
-Bank Details
-
-1, Name: Naresh i Technologies
-A/C No. 50200022639833 Bank: HDFC A/C Type: Current Account
-IFSC Code: HDFC0001627 MICR Code: 500240035
-Branch Code: 001627 Branch: Ameerpet , Telangana
-Please ping me at 7997998958 admission related queries 
-
-2. https://rzp.io/l/Naresh-IT
-
-
-
 nodemon
+
+
+Param
+> What we pass after /
+> We need to define in route
+QueryParams
+> What we pass after ?
+> No Need to define
