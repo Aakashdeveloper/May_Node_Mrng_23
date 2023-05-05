@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
-const port = 8811;
-let {dbConnect} = require('./src/controller/dbContoller');
-
+const morgan = require('morgan');
+const dotenv = require('dotenv');
+dotenv.config()
+const port = process.env.PORT || 8811;
+const fs = require('fs');
+const {dbConnect} = require('./src/controller/dbContoller');
 
 
 let menu = [
@@ -14,6 +17,8 @@ let menu = [
 const categoryRouter = require('./src/controller/categoryRouter')(menu);
 const productRouter = require('./src/controller/productRouter')(menu);
 //middleware supporting lib
+app.use(morgan('common',{stream:fs.createWriteStream('./app.log')}))
+
 // static file path
 app.use(express.static(__dirname+'/public'))
 // html files path
@@ -34,5 +39,5 @@ app.use('/products',productRouter)
 app.listen(port,function(err){
     if(err) throw err;
     dbConnect()
-    console.log('server listening on port 8811')
+    console.log(`server listening on port ${port}`)
 })

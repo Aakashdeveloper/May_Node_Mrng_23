@@ -1,0 +1,12 @@
+::1 - - [05/May/2023:04:09:57 +0000] "GET /category HTTP/1.1" 304 -
+::1 - - [05/May/2023:04:09:57 +0000] "GET /css/bootstrap.min.css HTTP/1.1" 304 -
+::1 - - [05/May/2023:04:09:57 +0000] "GET /css/styles.css HTTP/1.1" 304 -
+::1 - - [05/May/2023:04:09:58 +0000] "GET /js/bootstrap.min.js HTTP/1.1" 304 -
+::1 - - [05/May/2023:04:09:58 +0000] "GET /fonts/glyphicons-halflings-regular.woff HTTP/1.1" 404 178
+::1 - - [05/May/2023:04:09:58 +0000] "GET /fonts/glyphicons-halflings-regular.ttf HTTP/1.1" 404 177
+::1 - - [05/May/2023:04:10:00 +0000] "GET /products HTTP/1.1" 304 -
+::1 - - [05/May/2023:04:10:00 +0000] "GET /css/bootstrap.min.css HTTP/1.1" 304 -
+::1 - - [05/May/2023:04:10:00 +0000] "GET /css/styles.css HTTP/1.1" 304 -
+::1 - - [05/May/2023:04:10:00 +0000] "GET /js/bootstrap.min.js HTTP/1.1" 304 -
+::1 - - [05/May/2023:04:10:00 +0000] "GET /fonts/glyphicons-halflings-regular.woff HTTP/1.1" 404 178
+::1 - - [05/May/2023:04:10:00 +0000] "GET /fonts/glyphicons-halflings-regular.ttf HTTP/1.1" 404 177

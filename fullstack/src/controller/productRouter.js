@@ -1,6 +1,7 @@
 const express = require('express');
 const productRouter = express.Router();
-const {getData}  = require('./dbContoller')
+const {getData}  = require('./dbContoller');
+let mongo = require('mongodb');
 
 function router(menu){
     // product route
@@ -22,9 +23,11 @@ function router(menu){
             res.render('product',{title:'Products Listing Page',products:products,menu})
         })
 
-    productRouter.route('/details')
-        .get((req,res) => {
-            res.send('This is products details Route')
+    productRouter.route('/details/:id')
+        .get(async(req,res) => {
+            let query = {"_id":mongo.ObjectId(req.params.id)}
+            let products = await getData('products',query)
+            res.render('product',{title:'Products Details Page',products:products,menu})
     })
 
     return productRouter

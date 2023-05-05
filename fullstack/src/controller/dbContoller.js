@@ -1,6 +1,6 @@
 let mongo = require('mongodb');
 let MongoClient = mongo.MongoClient;
-let mongoUrl = "mongodb://localhost:27017";
+let mongoUrl = process.env.MongoUrl;
 let db;
 
 function dbConnect(){

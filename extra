@@ -14,8 +14,8 @@ Please ping me at 7997998958 admission related queries
 
 NPM
 Basic NodeJS(in built)(Os,file,http)
-////////////
 NodeJS(full Stack App) (Node-EJs-Mongo-Express)
+////////////
 Third Party Api (Weather Api)
 Redis  > 6379
 
@@ -187,3 +187,13 @@ Param
 QueryParams
 > What we pass after ?
 > No Need to define
+
+//es5
+var a = 10
+var b = "my age is "+a
+"my age is 10"
+
+//es6
+let a = 10;
+let b = `my age is ${a}`
+"my age is 10"
