@@ -119,3 +119,91 @@ db.users.insert({_id:2,name:"Rohit"})
 db.users.insert({_id:1,name:"Arita",city:"Paris"})
 
 db.users.find({city:'Paris'})
+
+
+//////cloud
+> Network access > Add IP address >
+Access List : 0.0.0.0/0
+comment : ANy text
+
+> Database access > Add new db user
+Username> test
+passowrd> Autogenerate
+role> Atlas Admin
+
+mongodb+srv://<username>:<password>@cluster0.f8vmc.mongodb.net/?retryWrites=true&w=majority
+mongodb+srv://test:Autogenerate@cluster0.f8vmc.mongodb.net/?retryWrites=true&w=majority
+
+db.restaurants.find({state_id:2})
+
+db.restaurants.find({condition},{projection})
+
+db.restaurants.find({state_id:2},{restaurant_name:1,address:1})
+
+db.restaurants.find({state_id:2},{restaurant_name:1,address:1,_id:0})
+
+db.restaurants.find({},{restaurant_name:1,cost:1})
+
+db.restaurants.find({},{restaurant_name:1,cost:1}).sort({cost:1})
+
+db.restaurants.find({},{restaurant_name:1,cost:1}).sort({cost:-1})
+
+db.restaurants.find({},{restaurant_name:1,cost:1}).sort({cost:-1}).limit(3)
+
+db.restaurants.find({},{restaurant_name:1,cost:1}).sort({cost:-1}).skip(3).limit(3).pretty()
+
+db.restaurants.find({},{restaurant_name:1,cost:1}).sort({cost:-1}).skip(6).limit(3).pretty()
+
+db.restaurants.find({},{restaurant_name:1,cost:1}).sort({cost:-1}).skip(9).limit(3).pretty()
+db.restaurants.find({},{restaurant_name:1,cost:1}).sort({cost:-1}).skip(12).limit(3).pretty()
+
+
+db.restaurants.find({"mealTypes.mealtype_id":4},{restaurant_name:1,mealTypes:1}).pretty()
+
+
+db.restaurants.find({"mealTypes.mealtype_id":{$in:[1,4,5]}},{restaurant_name:1,mealTypes:1}).pretty()
+
+db.restaurants.count({"mealTypes.mealtype_id":{$in:[1,4,5]}})
+
+db.restaurants.find({cost:{$lt:500}},{restaurant_name:1,cost:1}).pretty()
+
+db.restaurants.find({cost:{$gt:500}},{restaurant_name:1,cost:1}).pretty()
+
+db.restaurants.find({cost:{$gt:500,$lt:1000}},{restaurant_name:1,cost:1}).pretty()
+
+///update///
+db.users.update(
+    {condition}
+    {values}
+)
+
+
+db.users.update(
+    {"name":"Nikita"},
+    {
+        $set:{
+            "role":"Users",
+            "city":"Paris"
+        }
+    },
+    {
+        multi:true
+    }
+)
+
+
+db.users.update(
+    {"name":"Nikita"},
+    {
+        $unset:{
+            "__v":1
+        }
+    }
+)
+
+/// Delete
+> Delete all 
+db.user.remove({})
+
+> Delete particular 
+db.user.remove({"name":"Nikita"})
