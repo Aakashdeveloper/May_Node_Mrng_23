@@ -22,8 +22,9 @@ Redis v4
 Redisv4 With Mongov5
 ImageUpload
 ImageUpload(formidable)
-////////////
 MongoDb Basic >27017  (local/cloud)
+////////////
+
 Zomato App backend
 Api with NodeJS(Rest)>1
 DashBoard(Crud)
@@ -210,3 +211,9 @@ del keyname
 FLUSHALL
 
 set keyname value ex time
+
+
+C > Create  (POST)
+R > Read    (GET)
+U > Update  (PUT/PATCH)
+D > Delete  (DELETE)
