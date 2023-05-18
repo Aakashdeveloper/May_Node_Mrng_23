@@ -11,11 +11,39 @@ function dbConnect(){
 }
 
 async function getData(colName,query){
-    return await db.collection(colName).find(query).toArray()
+    let output ;
+    try{
+        output = await db.collection(colName).find(query).toArray()
+    } catch (err){
+        output = {"error":"Error in Condition for getData"}
+    }
+    return output
+}
+
+async function getDataSort(colName,query,sort){
+    let output ;
+    try{
+        output = await db.collection(colName).find(query).sort(sort).toArray()
+    } catch (err){
+        output = {"error":"Error in Condition for getDataSort"}
+    }
+    return output
 }
 
 
+async function getDataSortLimit(colName,query,sort,skip,limit){
+    let output ;
+    try{
+        output = await db.collection(colName).find(query).sort(sort).skip(skip).limit(limit).toArray()
+    } catch (err){
+        output = {"error":"Error in Condition for getDataSortLimit"}
+    }
+    return output
+}
+
 module.exports = {
     dbConnect,
-    getData
+    getData,
+    getDataSort,
+    getDataSortLimit
 }

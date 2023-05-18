@@ -5,7 +5,7 @@ dotenv.config();
 let bodyParser = require('body-parser');
 let cors = require('cors');
 let port = process.env.PORT;
-let {dbConnect,getData}  = require('./controller/dbController')
+let {dbConnect,getData,getDataSort,getDataSortLimit}  = require('./controller/dbController')
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
@@ -64,14 +64,31 @@ app.get('/filters/:mealId',async(req,res)=>{
     let query = {};
     let mealId = Number(req.params.mealId);
     let cuisineId = Number(req.query.cuisineId);
+    let lcost = Number(req.query.lcost);
+    let hcost = Number(req.query.hcost);
+    let sort = {cost:1}
+    let skip = 0;
+    let limit = 1000000000
+    if(req.query.sort){
+        sort={cost:req.query.sort}
+    }
+    if(req.query.skip && req.query.limit){
+        skip=Number(req.query.skip);
+        limit=Number(req.query.limit)
+    }
     if(cuisineId){
         query = {
             "mealTypes.mealtype_id":mealId,
             "cuisines.cuisine_id":cuisineId
         }
+    }else if(lcost && hcost){
+        query={
+            "mealTypes.mealtype_id":mealId,
+            $and:[{cost:{$gt:lcost,$lt:hcost}}]
+        }
     }
     let collection = 'restaurants';
-    let output = await getData(collection,query)
+    let output = await getDataSortLimit(collection,query,sort,skip,limit)
     res.send(output)
 
 })

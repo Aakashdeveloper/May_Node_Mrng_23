@@ -15,8 +15,11 @@
 > (GET) Filter Restaurants wrt to mealType + cuisineType
 * http://localhost:8770/filters/4?cuisineId=3
 > (GET) Filter Restaurants wrt to mealType + cost
+* http://localhost:8770/filters/3?lcost=500&hcost=2000
 > (GET) Sort on thr basis of price
+* http://localhost:8770/filters/1?cuisineId=1&sort=1
 > (GET) Pagination
+* http://localhost:8770/filters/1?cuisineId=1&sort=1&skip=1&limit=2
 
 // Page3
 > (GET) Detilas of the restaurant
