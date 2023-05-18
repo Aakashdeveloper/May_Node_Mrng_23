@@ -86,6 +86,10 @@ app.get('/filters/:mealId',async(req,res)=>{
             "mealTypes.mealtype_id":mealId,
             $and:[{cost:{$gt:lcost,$lt:hcost}}]
         }
+    }else if(mealId){
+        query={
+            "mealTypes.mealtype_id":mealId,
+        }
     }
     let collection = 'restaurants';
     let output = await getDataSortLimit(collection,query,sort,skip,limit)
