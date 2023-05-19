@@ -23,14 +23,40 @@
 
 // Page3
 > (GET) Detilas of the restaurant
+* http://localhost:8770/details/6288d22dbb17b75750d11ca8
 > (GET) Menu wrt to restaurant
+* http://localhost:8770/menu/10
 
 // Page4
 > (POST) Details of selected menu
+* http://localhost:8770/menuDetails
+ {"id":[4,2,6]}
 > (POST) Place order
+* http://localhost:8770/placeOrder
+{
+    "orderId": 6,
+    "name": "Amit",
+    "email": "amit@gmail.com",
+    "address": "Hom 65",
+    "phone": 8934645457,
+    "cost": 922,
+    "menuItem": [
+      23,
+      11,
+      14,
+      19
+    ]
+  }
 
 // Page5
 > (GET) View all order/Wrt to email
+* http://localhost:8770/orders
 > (PUT) Update order details
+* http://localhost:8770/updateOrder
+{
+	"_id":"6466f48b6ac1aecc52d5b43b",
+	"status":"Delivered"
+}
 > (DELETE) Delete order
-
+* http://localhost:8770/deleteOrder
+{"_id":"6466f4c06ac1aecc52d5b43c"}
