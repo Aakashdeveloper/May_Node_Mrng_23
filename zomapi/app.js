@@ -6,12 +6,21 @@ dotenv.config();
 let bodyParser = require('body-parser');
 let cors = require('cors');
 let port = process.env.PORT;
+let authKey = "may"+process.env.Token
 let {dbConnect,getData,getDataSort,getDataSortLimit
     ,postData,updateData,deleteData}  = require('./controller/dbController')
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cors());
+
+function auth(key){
+    if(key === authKey){
+        return true
+    }else{
+        return false
+    }
+}
 
 //get heart beat
 app.get('/',(req,res) => {
@@ -20,10 +29,16 @@ app.get('/',(req,res) => {
 
 //list of city
 app.get('/location',async (req,res) => {
-    let query = {};
-    let collection = 'location';
-    let output = await getData(collection,query)
-    res.send(output)
+    let key = req.header('x-basic-token')
+    if(auth(key)){
+        let query = {};
+        let collection = 'location';
+        let output = await getData(collection,query)
+        res.send(output)
+    }else{
+        res.send('Unauthenticated')
+    }
+    
 })
 
 
