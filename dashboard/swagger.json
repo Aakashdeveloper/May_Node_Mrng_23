@@ -1,0 +1,80 @@
+{
+    "openapi":"3.0.0",
+    "info":{
+        "description":"This is the api for users",
+        "version":"__version__"
+    },
+    "tags":[
+        {
+            "name":"PUBLIC ROUTE",
+            "description":"Public Route"
+        }
+    ],
+    "paths":{
+        "/health":{
+          "summary":"Testing User Check",
+          "get":{
+              "description":"Testing Users for the app",
+              "tags":["PUBLIC ROUTE"],
+              "responses":{
+                  "200":{
+                      "description":"User Pass"
+                  }
+              }
+          }
+        },
+        "/users":{
+            "summary":"Testing User Route",
+            "get":{
+                "description":"Testing Users Route for the app",
+                "tags":["PUBLIC ROUTE"],
+                "parameters":[
+                    {
+                        "in":"query",
+                        "name":"role",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description":"Choose role as admin or user"
+                    },
+                    {
+                        "in":"query",
+                        "name":"city",
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description":"Enter City"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"User Pass"
+                    }
+                }
+            }
+        },
+        "/user/{id}":{
+            "summary":"Testing User Route",
+            "get":{
+                "description":"Testing Users Route for the app",
+                "tags":["PUBLIC ROUTE"],
+                "parameters":[
+                    {
+                        "in":"path",
+                        "name":"id",
+                        "required":true,
+                        "schema":{
+                            "type":"string"
+                        },
+                        "description":"Enter Object Id"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"User Pass"
+                    }
+                }
+            }
+        }    
+    }
+}

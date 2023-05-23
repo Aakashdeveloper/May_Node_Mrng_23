@@ -28,9 +28,9 @@ ImageUpload(formidable)
 MongoDb Basic >27017  (local/cloud)
 Zomato App backend
 Api with NodeJS(Rest)>1
+Swagger
 ////////////
 DashBoard(Crud)
-Swagger
 Testing
 Github
 --Deployment of app---
@@ -39,6 +39,7 @@ Pm2
 Nginx
 Jenkins
 Docker
+
 Email With Node(nodemailer)
 Login/Logout(JWT)
 Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
