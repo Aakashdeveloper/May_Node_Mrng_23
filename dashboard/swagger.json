@@ -75,6 +75,93 @@
                     }
                 }
             }
-        }    
+        },
+        "/addUser":{
+            "summary":"Testing Add User  Route",
+            "post":{
+                "description":"Testing Add Users Route for the app",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":"true",
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "name":"Punith",
+                                "city":"Delhi",
+                                "phone":87878933,
+                                "role":"User",
+                                "isActive":true
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200":{
+                        "description":"User Pass"
+                    }
+                }
+            }
+        },
+        "/updateUser":{
+            "summary":"Testing User Route",
+            "put":{
+                "description":"Testing Users Route for the app",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":"true",
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "_id":"",
+                                "name":"Punith",
+                                "city":"Delhi",
+                                "phone":87878933,
+                                "role":"User",
+                                "isActive":true
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200":{
+                        "description":"User Pass"
+                    }
+                }
+            }
+        },
+        "/deleteUser":{
+            "summary":"Testing User Route",
+            "delete":{
+                "description":"Testing Users Route for the app",
+                "tags":["PUBLIC ROUTE"],
+                "requestBody":{
+                    "required":"true",
+                    "content":{
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "id":"string"
+                            },
+                            "example":{
+                                "_id":""
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200":{
+                        "description":"User Pass"
+                    }
+                }
+            }
+        }   
     }
 }

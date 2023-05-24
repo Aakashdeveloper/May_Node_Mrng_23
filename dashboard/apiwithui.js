@@ -25,12 +25,38 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cors());
 
+app.use(express.static(__dirname+'/public'))
+app.set('views','./src/views');
+app.set('view engine','ejs')
+
 app.get('/health',(req,res) => {
     res.status(200).send('Health Ok')
 })
 
+app.get('/new',(req,res) => {
+    res.render('forms')
+})
+
+app.get('/',async(req,res)=>{
+    const output = [];
+    const cursor = collection.find();
+    for await(const data of cursor){
+        output.push(data)
+    }
+    cursor.closed;
+    res.render('index',{data:output})
+})
+
+
 app.post('/addUser',async(req,res)=>{
-    await collection.insertOne(req.body);
+    let data = {
+        name:req.body.name,
+        city:req.body.city,
+        phone:req.body.phone,
+        role:req.body.role?req.body.role:'User',
+        isActive:true
+    }
+    await collection.insertOne(data);
     res.send('Data Added')
 })
 
