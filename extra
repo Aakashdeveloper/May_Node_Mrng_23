@@ -34,10 +34,8 @@ DashBoard(Crud)
 Github
 --Deployment of app---
 render
-////////////
-
-
 Pm2
+////////////
 Nginx
 Jenkins
 Docker
@@ -225,3 +223,12 @@ D > Delete  (DELETE)
 
 
 https://dashboard.render.com/login
+
+
+npm i -g pm2
+
+pm2 start main.js
+pm2 status
+pm2 stop filename
+
+pm2 start app.js -i processNumber
