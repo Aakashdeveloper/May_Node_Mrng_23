@@ -35,16 +35,18 @@ Github
 --Deployment of app---
 render
 Pm2
-////////////
 Nginx
 Jenkins
+Email With Node(nodemailer)
+////////////
 Docker
 
-Email With Node(nodemailer)
+
 Login/Logout(JWT)
 Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
 Oauth(with google)
 TelegramChat
+
 GraphQl API
 Paytm-Payment
 Chatapp
@@ -232,3 +234,6 @@ pm2 status
 pm2 stop filename
 
 pm2 start app.js -i processNumber
+
+
+https://support.google.com/accounts/answer/185833?hl=en
