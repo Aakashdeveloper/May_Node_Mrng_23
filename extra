@@ -39,12 +39,10 @@ Nginx
 Jenkins
 Email With Node(nodemailer)
 Login/Logout(JWT)
+Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
 ////////////
 Docker
 
-
-
-Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
 Oauth(with google)
 TelegramChat
 
