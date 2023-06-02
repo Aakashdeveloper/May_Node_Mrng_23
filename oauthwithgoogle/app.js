@@ -15,28 +15,48 @@ app.use(passport.initialize())
 app.use(passport.session())
 app.set('view engine', 'ejs')
 
+app.get('/',(req,res) => {
+    res.send('<a href="/auth/google">Login With Google</a>')
+})
 
+app.get('/error',(req,res) => {
+    res.send('Error while connecting')
+})
+
+app.get('/profile',(req,res) => {
+    res.send(userprofile)
+})
+
+passport.deserializeUser((user,done) => {
+    done(null,{
+        provider:user.provider,
+        id:user.provider_id
+    })
+})
+
+passport.serializeUser((user,cb) => {
+    cb(null,user)
+})
 
 passport.use(new GoogleStrategy({
-    clientID: GOOGLE_CLIENT_ID,
-    clientSecret: GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://www.example.com/auth/google/callback"
+    clientID: '',
+    clientSecret: '',
+    callbackURL: "http://localhost:9800/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, cb) {
-    User.findOrCreate({ googleId: profile.id }, function (err, user) {
-      return cb(err, user);
-    });
-  }
+      userprofile = profile;
+      return cb(null, userprofile);
+    }
 ));
 
 app.get('/auth/google',
   passport.authenticate('google', { scope: ['profile'] }));
 
 app.get('/auth/google/callback', 
-  passport.authenticate('google', { failureRedirect: '/login' }),
+  passport.authenticate('google', { failureRedirect: '/error' }),
   function(req, res) {
     // Successful authentication, redirect home.
-    res.redirect('/');
+    res.redirect('/profile');
   });
 
 

@@ -40,18 +40,20 @@ Jenkins
 Email With Node(nodemailer)
 Login/Logout(JWT)
 Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
+Oauth(with google)
+TelegramChat
+S3 Imageupload
 ////////////
 Docker
 
-Oauth(with google)
-TelegramChat
 
 GraphQl API
+NodeJs with postgres
+
 Paytm-Payment
 Chatapp
-NodeJs with postgres
+
 FIREBASE
-S3 Imageupload
 AWS lambda micorservice
 --------NOT---------
 React/Angular
