@@ -43,17 +43,15 @@ Oauth(with github) (https://docs.github.com/en/apps/oauth-apps/building-oauth-ap
 Oauth(with google)
 TelegramChat
 S3 Imageupload
+GraphQl API
+NodeJs with postgres
 ////////////
 Docker
 
-
-GraphQl API
-NodeJs with postgres
-
-Paytm-Payment
+FIREBASE
 Chatapp
 
-FIREBASE
+Paytm-Payment
 AWS lambda micorservice
 --------NOT---------
 React/Angular
@@ -238,3 +236,13 @@ pm2 start app.js -i processNumber
 
 
 https://support.google.com/accounts/answer/185833?hl=en
+
+//dummy api
+> open cmd as admin
+> npm i -g json-server
+
+json-server --watch db.json --port 2900
+
+postgres
+> pg_ctl -D /usr/local/var/postgres start
+> pg_ctl -D /usr/local/var/postgres stop
