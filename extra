@@ -238,7 +238,7 @@ https://support.google.com/accounts/answer/185833?hl=en
 > open cmd as admin
 > npm i -g json-server
 
-json-server --watch db.json --port 2900
+json-server --watch db.json --port 2901
 
 postgres
 > pg_ctl -D /usr/local/var/postgres start
